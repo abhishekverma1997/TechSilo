@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Image Classification</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!--<link rel="stylesheet" href="C:\Users\danie\Desktop\Flask UdemyKurs\static\css\style.css">-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        
+		<!--<marquee direction="down"><center>FINAL YEAR PROJECT 2020</marquee>-->
+		<!--<img src="http://www.etutoriale.ro/banners/88x31.gif" width="88" height="31" alt="Tutorials " border="0">-->
+		<marquee direction="down"><center><h1><b>FINAL YEAR PROJECT 2020</b></h1></marquee>
+		<h1>Disease Detection in Coconut Plantation</h1>
+		<h2>Upload an image</h2>
+        <hr>
+
+        <form action="{{ url_for('upload_image')}}" method="POST" enctype="multipart/form-data">
+
+          <div class="form-group">
+            <label>Select image</label>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="image" id="image">
+              
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Upload</button>
+
+        </form>
+
+      </div>
+    </div>
+    <br>
+    {{ prediction }}
+  </div>
+</body>

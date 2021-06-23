@@ -76,8 +76,8 @@ def just_a_function():
     for r_address in rcvr_address:
         
         #The mail addresses and password
-        sender_address = 'svermaan@gmail.com'
-        sender_pass = 'ABh!shek1997'
+        sender_address = ENTER EMAIL ADDRESS (GMAIL)
+        sender_pass =  ENTER EMAIL ADDRESS PASSWORD (GMAIL)
         receiver_address = r_address
         #Setup the MIME
         message = MIMEMultipart()

@@ -98,7 +98,7 @@ import pymongo
 import dnspython
 
 
-client = pymongo.MongoClient("mongodb+srv://abv:admin@cluster0.wsnj0.mongodb.net/Holidays2021?retryWrites=true&w=majority")
+client = pymongo.MongoClient(""ENTER MONGODB LINK"")
 
 db = client.test
 

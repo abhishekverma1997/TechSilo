@@ -45,7 +45,7 @@ dag = DAG(
 )
 
 def just_a_function():
-    client = pymongo.MongoClient("mongodb+srv://abv:admin@cluster0.wsnj0.mongodb.net/Holidays2021?retryWrites=true&w=majority")
+    client = pymongo.MongoClient("ENTER MONGODB LINK")
 
     db = client.test
     

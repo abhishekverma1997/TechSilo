@@ -47,8 +47,8 @@ rcvr_address = ['abv19.pitt@yandex.com']
 
 for r_address in rcvr_address:
     #The mail addresses and password
-    sender_address = 'svermaan@gmail.com'
-    sender_pass = 'ABh!shek1997'
+    sender_address = ENTER GMAIL ADDRESS
+    sender_pass = ENTER GMAIL PASSWORD
     receiver_address = r_address
     #Setup the MIME
     message = MIMEMultipart()

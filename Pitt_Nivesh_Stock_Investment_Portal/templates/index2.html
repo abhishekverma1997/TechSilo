@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Pitt Nivesh</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/landing-page.min.css" rel="stylesheet">
+
+<style>
+h1 {text-align: center;}
+	p {text-align: center;}
+	div {text-align: center;}
+    label {color: black}
+    .modal-title{color: black }
+</style>
+
+</head>
+
+<body style="background-color:lightblue;">
+
+	<nav class="navbar navbar-light bg-light static-top">
+		<div class="container">
+          <img src="../static/pitt_nivesh.jpg" alt="Natural" style="vertical-align: baseline;
+          border-style: none;
+          float: left;
+          margin-right: 100px"/>
+          <a class="navbar-brand" href="#">Start your journey with us</a>
+		  <a class="btn btn-primary" style="float: right;
+          margin-left: auto;
+          margin-right: 10px;
+          padding-right: 10px;" href="/pitt_nivesh_main">Sign Up</a>
+		  <a class="btn btn-primary" href="/login_user">Sign In</a>
+		</div>
+      </nav>
+
+
+
+<p><b>ENTER USER REGISTRATION INFO.</b></p>
+
+<form action="{{ url_for('user_registration') }}" method="POST">
+
+<form method="POST">
+	<div style="text-align:center;">
+	<b>USER ID: </b><br>
+    <input name="user_id"><br><br>
+	
+	<b>EMAIL :</b><br>
+	<input name="email"><br><br>
+	
+	<b>Password</b><br>
+	<input type="password" name="password"><br><br>
+	
+	<b>Name</b><br>
+	<input name="user_name"><br><br>
+	
+	<b>Date of Birth</b><br>
+	<input name="dob" placeholder="YYYY-MM-DD"><br><br>
+	
+	<b>Gender</b><br>
+	<input name="gender"><br><br>
+	
+	<b>About You</b><br>
+	<input name="bio"><br><br>
+
+	<b>Street 1</b><br>
+	<input name="st1"><br><br>
+
+	<b>Street 2</b><br>
+	<input name="st2"><br><br>
+
+	<b>City</b><br>
+	<input name="city"><br><br>
+
+	<b>State</b><br>
+	<input name="state"><br><br>
+
+	<b>Country</b><br>
+	<input name="country"><br><br>
+
+	<b>ZIP</b><br>
+	<input name="zip"><br><br>
+
+	<br>
+<input type="submit" class="btn btn-success" value="Register User">
+</div>
+
+</form>
+<br>
+
+</div>
+<div style="text-align:center;">
+{{ what }}<br>
+<br>
+</div>
+ 
+</body>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</html>

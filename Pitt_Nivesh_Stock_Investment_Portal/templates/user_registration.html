@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
+</style>
+
+</head>
+
+<body style="background-color:lightblue;">
+
+<p style="text-align:center;"><img src="../static/pitt_nivesh.jpg" alt="Natural" /></p>
+
+<div>
+
+<form action="{{ url_for('user_registration') }}" method="POST">
+
+<form method="POST">
+	<p><b>USER ID</b></p>
+	<div style="text-align:center;">
+    <input name="user_id"><br>
+	
+	<p><b>EMAIL</b></p>
+	<input name="email"><br>
+	
+	<p><b>Password</b></p>
+	<input type="password" name="password"><br>
+	
+	<p><b>Name</b></p>
+	<input name="user_name"><br>
+	
+	<p><b>Date of Birth</b></p>
+	<input name="dob" placeholder="YYYY-MM-DD"><br>
+	
+	<p><b>Gender</b></p>
+	<input name="gender"><br>
+	
+	<p><b>About You</b></p>
+	<input name="bio"><br>
+	<br>
+<input type="submit" class="btn btn-success" value="Register User">
+</div>
+
+</form>
+<br>
+
+
+</div>
+
+</form>
+<br>
+<div style="text-align:center;">
+
+</div>
+<div style="text-align:center;">
+{{ what }}<br>
+<br>
+</div>
+
+</body>
+
+
+
+</html>

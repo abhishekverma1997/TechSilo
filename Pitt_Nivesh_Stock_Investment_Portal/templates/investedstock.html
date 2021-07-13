@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+  
+	<title>Pitt Nivesh</title>
+  
+	<!-- Bootstrap core CSS -->
+	<link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+	<!-- Custom fonts for this template -->
+	<link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  
+	<!-- Custom styles for this template -->
+	<link href="../static/css/landing-page.min.css" rel="stylesheet">
+	
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+</style>
+
+</head>
+
+<body style="background-color:lightblue;">
+<p style="text-align:center;"><img src="../static/pitt_nivesh.jpg" alt="Natural" /></p>
+
+<div style="text-align:center;">
+<p><b>Welcome</b></p>
+
+{{ user_name_what }}<br>
+<br>
+</div>
+
+<p><b>YOUR INVESTED STOCKS</b></p>
+
+
+<div style="text-align:center;">
+<br>
+<a href="/home_page" align="center"><center><input type="button" class="btn btn-success" value="Home"></center></a>
+</div>
+</br>
+</br>
+
+{% block what_collab %}
+<div style="text-align:center;">
+<table style="width:100%">
+<tr>
+    <th>Stock Symbol</th>
+    <th>Stock Name</th>
+	<th>Volume</th>
+	<th>Price when stock was bought ($)</th>
+	
+	
+	
+ </tr>
+  {% for index in range( what_collab|length ) %}
+		<tr>
+			<td>{{what_collab[index]['symbol']}}</td>
+			<td>{{what_collab[index]['name']}}</td>
+			<td>{{what_collab[index]['volume']}}</td>
+			<td>{{what_collab[index]['price']}}</td>
+
+			
+			
+		</tr>
+		
+{% endfor %}
+</div>
+
+{% endblock %}
+
+
+</body>
+
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</html>

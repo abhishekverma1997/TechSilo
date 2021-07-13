@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+  
+	<title>Pitt Nivesh</title>
+  
+	<!-- Bootstrap core CSS -->
+	<link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+	<!-- Custom fonts for this template -->
+	<link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  
+	<!-- Custom styles for this template -->
+	<link href="../static/css/landing-page.min.css" rel="stylesheet">
+  
+<style>
+
+h1 {text-align: center;}
+	p {text-align: center;}
+	div {text-align: center;}
+    label {color: black}
+    .modal-title{color: black }
+
+</style>
+
+</head>
+
+<body style="background-color:lightblue;">
+
+
+	<nav class="navbar navbar-light bg-light static-top">
+		<div class="container">
+          <img src="../static/pitt_nivesh.jpg" alt="Natural" style="vertical-align: baseline;
+          border-style: none;
+          float: left;
+          margin-right: 100px"/>
+          <a class="navbar-brand" href="#">Start your journey with us</a>
+		  <a class="btn btn-primary" style="float: right;
+          margin-left: auto;
+          margin-right: 10px;
+          padding-right: 10px;" href="/pitt_nivesh_main">Sign Up</a>
+		  <a class="btn btn-primary" href="/login_user">Sign In</a>
+		</div>
+      </nav>
+
+<p><b>ENTER USER LOG-IN INFO.</b></p>
+
+<form action="{{ url_for('user_authentication') }}" method="POST">
+
+<form method="POST">
+	
+	<div style="text-align:center;">
+    
+	<p><b>ENTER EMAIL</b></p>
+	<input name="email"><br></br>
+	<p><b>ENTER Password</b></p>
+	<input name="password"><br></br>
+	<br>
+<input type="submit" class="btn btn-success" value="Log In">
+</div>
+
+</form>
+<br>
+<div style="text-align:center;">
+
+</div>
+<div style="text-align:center;">
+{{ what }}<br>
+<br>
+</div>
+
+</body>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</html>

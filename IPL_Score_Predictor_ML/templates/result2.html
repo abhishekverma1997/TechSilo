@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+    <style>
+    body{
+          background-image: url("../static/ground5.jpg");
+          background-color: #cccccc;
+          background-position: center; /* Center the image */
+          background-repeat: no-repeat; /* Do not repeat the image */
+    }
+    </style>
+        <meta charset="utf-8">
+        <title>First Innings Score Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_second">Indian Premier League (IPL) Score Predictor</span></h2>
+            <div class='description'>
+    			<p><b>Running on Heroku U.S. regional servers</b></p>
+    		</div>
+    	</div>
+    	
+    	<marquee behavior="scroll" direction="left" scrollamount="15" align="middle" hspace="450" width="40%">
+            <img src="../static/csk1.png" height="80" alt="Natural" />
+            <img src="../static/rcb1.png" height="80" alt="Natural" />
+            <img src="../static/kkr1.png" height="80" alt="Natural" />
+            <img src="../static/mi1.png" height="80" alt="Natural" />
+            <img src="../static/iplbanner3.png" height="80" alt="Natural" />
+            <img src="../static/kxip1.png" height="80" alt="Natural" />
+            <img src="../static/rr1.png" height="80" alt="Natural" />
+            <img src="../static/dc1.png" height="80" alt="Natural" />
+            <img src="../static/srh1.png" height="80" alt="Natural" />
+        </marquee>
+
+        
+
+			
+				<p align="center"><b>The final predicted score (range): {{ lower_limit }} to {{ upper_limit }}</b></p>
+				<a href="/predictagain" align="center"><center><input type="button" value="Predict Again"></center></a>
+			  
+        
+        
+        <marquee behavior="scroll" direction="right" scrollamount="15" align="middle" hspace="450" width="40%">
+            <img src="../static/csk1.png" height="80" alt="Natural" />
+            <img src="../static/rcb1.png" height="80" alt="Natural" />
+            <img src="../static/kkr1.png" height="80" alt="Natural" />
+            <img src="../static/mi1.png" height="80" alt="Natural" />
+            <img src="../static/iplbanner3.png" height="80" alt="Natural" />
+            <img src="../static/kxip1.png" height="80" alt="Natural" />
+            <img src="../static/rr1.png" height="80" alt="Natural" />
+            <img src="../static/dc1.png" height="80" alt="Natural" />
+            <img src="../static/srh1.png" height="80" alt="Natural" />
+        </marquee>
+        
+        <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/abhishekverma1997/TechSilo"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/abhishekverma1997/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+
+           <p class='footer-description'><b>&copy Abhishek Verma 2020 &reg</b></p>
+       </div>
+
+
+    </body>
+</html>

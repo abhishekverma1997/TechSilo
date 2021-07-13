@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+    <style>
+    body{
+          /*background-image: url("../static/ground5.jpg");*/
+          /*background-color: #cccccc;*/
+          background-color: #92a8d1;
+          /*background-position: center;  Center the image */
+          /*background-repeat: no-repeat;  Do not repeat the image */
+    }
+    </style>
+        <meta charset="utf-8">
+        <title>IPL Score Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_second">Indian Premier League (IPL) Score Predictor</span></h2>
+            <div class='description'>
+    			<p><b>Running on Heroku U.S. regional servers</b></p>
+    		</div>
+    	</div>
+    	
+        <marquee behavior="scroll" direction="left" scrollamount="15" align="middle" hspace="450" width="40%">
+            <img src="../static/csk1.png" height="80" alt="Natural" />
+            <img src="../static/rcb1.png" height="80" alt="Natural" />
+            <img src="../static/kkr1.png" height="80" alt="Natural" />
+            <img src="../static/mi1.png" height="80" alt="Natural" />
+            <img src="../static/iplbanner3.png" height="80" alt="Natural" />
+            <img src="../static/kxip1.png" height="80" alt="Natural" />
+            <img src="../static/rr1.png" height="80" alt="Natural" />
+            <img src="../static/dc1.png" height="80" alt="Natural" />
+            <img src="../static/srh1.png" height="80" alt="Natural" />
+            
+        </marquee>
+        <!-- Prediction Area -->
+        
+        <div class="prediction-area">
+        
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+					<!-- Venue Select -->
+					<select class="form-input align-center" name="Venue">
+                        <option value="none">--- Select Venue ---</option>
+                        <option value="Barabati Stadium">Barabati Stadium</option>
+                        <option value="Brabourne Stadium">Brabourne Stadium</option>
+                        <option value="Buffalo Park">Buffalo Park</option>
+                        <option value="De Beers Diamond Oval">De Beers Diamond Oval</option>
+                        <option value="Dr DY Patil Sports Academy">Dr DY Patil Sports Academy</option>
+                        <option value="Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium">Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+                        <option value="Dubai International Cricket Stadium">Dubai International Cricket Stadium</option>
+                        <option value="Eden Gardens">Eden Gardens</option>
+                        <option value="Feroz Shah Kotla">Feroz Shah Kotla</option>
+                        <option value="Himachal Pradesh Cricket Association Stadium">Himachal Pradesh Cricket Association Stadium</option>
+                        <option value="Holkar Cricket Stadium">Holkar Cricket Stadium</option>
+						<option value="JSCA International Stadium Complex">JSCA International Stadium Complex</option>
+                        <option value="Kingsmead">Kingsmead</option>
+                        <option value="M Chinnaswamy Stadium">M Chinnaswamy Stadium</option>
+                        <option value="MA Chidambaram Stadium, Chepauk">MA Chidambaram Stadium, Chepauk</option>
+                        <option value="Maharashtra Cricket Association Stadium">Maharashtra Cricket Association Stadium</option>
+                        <option value="New Wanderers Stadium">New Wanderers Stadium</option>
+                        <option value="Newlands">Newlands</option>
+                        <option value="OUTsurance Oval">OUTsurance Oval</option>
+                        <option value="Punjab Cricket Association IS Bindra Stadium, Mohali">Punjab Cricket Association IS Bindra Stadium, Mohali</option>
+                        <option value="Punjab Cricket Association Stadium, Mohali">Punjab Cricket Association Stadium, Mohali</option>
+                        <option value="Rajiv Gandhi International Stadium, Uppal">Rajiv Gandhi International Stadium, Uppal</option>
+						<option value="Sardar Patel Stadium, Motera">Sardar Patel Stadium, Motera</option>
+                        <option value="Sawai Mansingh Stadium">Sawai Mansingh Stadium</option>
+                        <option value="Shaheed Veer Narayan Singh International Stadium">Shaheed Veer Narayan Singh International Stadium</option>
+                        <option value="Sharjah Cricket Stadium">Sharjah Cricket Stadium</option>
+						<option value="Sheikh Zayed Stadium">Sheikh Zayed Stadium</option>
+                        <option value="St George's Park">St George's Park</option>
+                        <option value="Subrata Roy Sahara Stadium">Subrata Roy Sahara Stadium</option>
+                        <option value="SuperSport Park">SuperSport Park</option>
+						<option value="Wankhede Stadium">Wankhede Stadium</option>
+                    </select><br>
+                    <!-- Batting Team Dropdown -->
+                    <select class="form-input align-center" name="batting-team">
+                        <option value="none">--- Select a Batting team ---</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Capitals">Delhi Capitals</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select><br>
+                    <!-- Bowling Team Dropdown -->
+                    <select class="form-input align-center" name="bowling-team">
+                        <option value="none">--- Select a Bowling team ---</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Capitals">Delhi Capitals</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select><br>         
+                    <input class="form-input" type="text" name="runs" placeholder="Runs eg. 64"><br>
+                    <input class="form-input" type="text" name="wickets" placeholder="Wickets eg. 4"><br>
+					<input class="form-input" type="text" name="overs" placeholder="Overs (>= 5.0) eg. 7.2"><br>
+                    <input class="form-input" type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs eg. 42"><br>
+                    <input class="form-input" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs eg. 3"><br>
+
+			<input type="submit" class="myButton" value="Predict Score">
+        	</form>
+            </div>
+
+            <!-- IPL Banner - 2 -->
+            
+        </div>
+        <marquee behavior="scroll" direction="right" scrollamount="15" align="middle" hspace="450" width="40%">
+            <img src="../static/csk1.png" height="80" alt="Natural" />
+            <img src="../static/rcb1.png" height="80" alt="Natural" />
+            <img src="../static/kkr1.png" height="80" alt="Natural" />
+            <img src="../static/mi1.png" height="80" alt="Natural" />
+            <img src="../static/iplbanner3.png" height="80" alt="Natural" />
+            <img src="../static/kxip1.png" height="80" alt="Natural" />
+            <img src="../static/rr1.png" height="80" alt="Natural" />
+            <img src="../static/dc1.png" height="80" alt="Natural" />
+            <img src="../static/srh1.png" height="80" alt="Natural" />
+        </marquee>
+
+        
+    </body>
+</html>
